@@ -7,7 +7,7 @@
 <meta name="description" content="Locally owned junk removal in Palmetto, Bradenton, Sarasota and Venice, FL. Fully insured, free quotes, all-in pricing starting at $125. Call (941) 254-1023.">
 <meta property="og:title" content="Rough n Tough Junk Removal">
 <meta property="og:description" content="Your junk. Our treasure. Free quotes and all-in pricing in Palmetto, Bradenton, Sarasota and Venice, FL.">
-<meta property="og:image" content="images/yard-before-after.jpg">
+<meta property="og:image" content="images/vine-before-after.jpg">
 <meta name="theme-color" content="#3A4C40">
 <link rel="preload" href="fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
@@ -59,7 +59,7 @@
     </div>
   </div>
   <div class="hero-photo">
-    <img src="images/truck-owner.jpg" width="1000" height="1000" alt="Owner of Rough n Tough Junk Removal in a truck loaded with furniture">
+    <img src="images/truck-owner.jpg" class="zoom" width="1000" height="1333" alt="Owner of Rough n Tough Junk Removal in a truck loaded with furniture">
   </div>
 </div></div>
 
@@ -116,11 +116,11 @@
   <div class="work-grid">
     <div class="card">
       <h3>Yard debris removal</h3>
-      <img src="images/yard-before-after.jpg" width="1000" height="1000" loading="lazy" alt="Before and after: a trailer overgrown with vines and brush, then cleared with bagged debris">
+      <img src="images/vine-before-after.jpg" class="zoom" width="1200" height="1808" loading="lazy" alt="Before and after: a trailer overgrown with vines and brush, then cleared with bagged debris">
     </div>
-    <div class="card">
+    <div class="card card-fill">
       <h3>Furniture removal</h3>
-      <img src="images/furniture-before-after.jpg" width="1000" height="1000" loading="lazy" alt="Before and after: a dining room with a table, chairs and china cabinet, then an empty room">
+      <div class="fillbox"><img src="images/furniture-before-after.jpg" class="zoom" width="1000" height="1000" loading="lazy" alt="Before and after: a dining room with a table, chairs and china cabinet, then an empty room"></div>
     </div>
   </div>
 </div></section>
@@ -178,5 +178,21 @@
   <a class="btn btn-gold" href="tel:+19412541023">Call now</a>
   <a class="btn btn-outline" href="https://calendar.app.google/RL26Y6vr5L81cjNb6">Free quote</a>
 </div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged photo" hidden><button class="lb-x" type="button" aria-label="Close photo">&times;</button><img alt=""></div>
+<script>
+(function(){
+var lb=document.getElementById('lb'),im=lb.querySelector('img'),last=null;
+function open(a){last=document.activeElement;im.src=a.src;im.alt=a.alt;lb.hidden=false;document.body.style.overflow='hidden';lb.querySelector('button').focus()}
+function close(){lb.hidden=true;document.body.style.overflow='';im.src='';if(last)last.focus()}
+document.querySelectorAll('.zoom').forEach(function(a){
+  a.tabIndex=0;a.setAttribute('role','button');a.setAttribute('aria-label','Enlarge photo: '+a.alt);
+  a.addEventListener('click',function(){open(a)});
+  a.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(a)}});
+});
+lb.addEventListener('click',close);
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close()});
+})();
+</script>
 </body>
 </html>
