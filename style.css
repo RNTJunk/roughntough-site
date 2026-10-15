@@ -138,3 +138,14 @@ h2{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(40px,5vw,
 .policy li{margin:6px 0}
 .policy .meta{color:var(--muted)}
 .policy a{color:var(--green);font-weight:600}
+
+/* quote form */
+.qform{margin-top:32px;display:grid;gap:18px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px}
+.qform label{display:grid;gap:6px;font-weight:600;font-size:17px}
+.qform input,.qform select,.qform textarea{font:inherit;font-weight:400;color:var(--ink);background:#fff;border:1.5px solid #9AA89F;border-radius:6px;padding:12px 14px;min-height:48px;width:100%}
+.qform textarea{resize:vertical}
+.qform input:focus,.qform select:focus,.qform textarea:focus{outline:3px solid var(--gold);outline-offset:1px;border-color:var(--green)}
+.qform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.qform .consent{margin:0;font-size:15px;color:var(--muted)}
+.qform button{cursor:pointer;width:100%}
+.policy .sub a{color:var(--green);font-weight:600}
