@@ -140,12 +140,19 @@ h2{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(40px,5vw,
 .policy a{color:var(--green);font-weight:600}
 
 /* quote form */
-.qform{margin-top:32px;display:grid;gap:18px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px}
-.qform label{display:grid;gap:6px;font-weight:600;font-size:17px}
-.qform input,.qform select,.qform textarea{font:inherit;font-weight:400;color:var(--ink);background:#fff;border:1.5px solid #9AA89F;border-radius:6px;padding:12px 14px;min-height:48px;width:100%}
-.qform textarea{resize:vertical}
-.qform input:focus,.qform select:focus,.qform textarea:focus{outline:3px solid var(--gold);outline-offset:1px;border-color:var(--green)}
+.qform{margin-top:36px;display:grid;gap:28px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:40px;box-shadow:0 2px 12px rgba(21,32,26,.06)}
+.qform label{display:grid;gap:10px;font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);line-height:1.1}
+.qform input,.qform select,.qform textarea{display:block;width:100%;font-family:var(--body);font-size:20px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink);background:#fff;border:2px solid #7F8F84;border-radius:8px;padding:0 18px;min-height:60px}
+.qform textarea{padding:16px 18px;min-height:160px;resize:vertical;line-height:1.4}
+.qform select{appearance:auto;padding-right:12px}
+.qform input::placeholder,.qform textarea::placeholder{color:#6B796F;font-weight:400}
+.qform input:focus,.qform select:focus,.qform textarea:focus{outline:3px solid var(--gold);outline-offset:2px;border-color:var(--green)}
 .qform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.qform .consent{margin:0;font-size:15px;color:var(--muted)}
-.qform button{cursor:pointer;width:100%}
+.qform .consent{margin:0;font-size:17px;color:var(--muted)}
+.qform .consent a{color:var(--green);font-weight:600}
+.qform button{cursor:pointer;width:100%;min-height:64px;font-size:26px}
 .policy .sub a{color:var(--green);font-weight:600}
+@media (max-width:640px){
+  .qform{padding:24px 18px;gap:24px}
+  .qform label{font-size:22px}
+}
