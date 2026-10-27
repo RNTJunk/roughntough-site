@@ -61,8 +61,8 @@ h2{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(34px,4.4v
 
 /* ============ HERO (full-bleed photo) ============ */
 .hero{position:relative;color:#fff;background:var(--green-dark)}
-.hero-bg{position:absolute;inset:0;background-image:url(images/truck-owner.jpg);background-size:cover;background-position:72% 28%}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(26,36,30,.92) 0%,rgba(26,36,30,.82) 40%,rgba(26,36,30,.42) 78%,rgba(26,36,30,.28) 100%)}
+.hero-bg{position:absolute;inset:0;background-image:url(images/truck-owner.jpg);background-size:cover;background-position:50% 0%}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(26,36,30,.92) 0%,rgba(26,36,30,.82) 40%,rgba(26,36,30,.44) 78%,rgba(26,36,30,.3) 100%),linear-gradient(to bottom,transparent 50%,rgba(26,36,30,.62) 100%)}
 .hero .wrap{position:relative;padding-top:84px;padding-bottom:84px}
 .hero-inner{max-width:620px}
 .hero .eyebrow{color:var(--gold)}
@@ -282,3 +282,21 @@ h2{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(34px,4.4v
   .rating{justify-content:flex-start}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}.btn:hover{transform:none}}
+
+/* quote popup */
+.qpop{position:fixed;inset:0;z-index:70;background:rgba(15,21,17,.74);display:flex;align-items:center;justify-content:center;padding:20px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.qpop[hidden]{display:none!important}
+.qpop-card{position:relative;background:var(--green);color:#fff;border:1px solid rgba(255,255,255,.16);border-radius:16px;max-width:460px;width:100%;padding:38px 32px 30px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.42);animation:qpop-in .22s ease}
+@keyframes qpop-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.qpop-card{animation:none}}
+.qpop-x{position:absolute;top:8px;right:12px;background:none;border:0;color:var(--soft);font-size:34px;line-height:1;cursor:pointer;padding:4px 12px}
+.qpop-x:hover{color:#fff;opacity:1}
+.qpop-eyebrow{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.qpop-card h2{color:#fff;margin:8px 0 0;font-size:clamp(34px,6vw,44px)}
+.qpop-card p{color:var(--soft);margin:12px auto 0;font-size:17px;max-width:38ch}
+.qpop-cta{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.qpop-cta .btn{width:100%}
+.qpop-cta .btn-green-outline{border-color:#fff;color:#fff}
+.qpop-cta .btn-green-outline:hover{background:rgba(255,255,255,.12);color:#fff}
+.qpop-no{margin-top:14px;background:none;border:0;color:var(--soft);font-size:15px;cursor:pointer;text-decoration:underline}
+.qpop-no:hover{color:#fff}

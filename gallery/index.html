@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#3A4C40">
 <link rel="preload" href="/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=7">
+<link rel="stylesheet" href="/style.css?v=8">
 <title>Before & After Junk Removal Photos | Rough n Tough</title>
 <meta name="description" content="Before and after photos of real junk removal jobs by Rough n Tough Junk Removal in Palmetto, Bradenton and Sarasota, FL. Patio cleanouts, furniture removal and yard debris.">
 <link rel="canonical" href="https://www.roughntoughjunkremoval.com/gallery/">
@@ -69,7 +69,12 @@
     {
       "@type": "ImageObject",
       "contentUrl": "https://www.roughntoughjunkremoval.com/images/yard1-ba.jpg",
-      "description": "Before and after yard cleanup: a home covered in vines, then cleared"
+      "description": "Before and after yard debris removal: overgrown shrubs and brush, then a cleared bed"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://www.roughntoughjunkremoval.com/images/vine-ba.jpg",
+      "description": "Before and after vine removal: a home covered in vines, then pulled clear"
     },
     {
       "@type": "ImageObject",
@@ -137,7 +142,8 @@
     <figure class="card"><h3>Porch & estate cleanout</h3><img src="/images/estate-ba.jpg" width="1120" height="541" loading="lazy" alt="Before and after porch cleanout: a lanai packed with furniture, then cleared to bare tile"><figcaption>A lanai packed with furniture cleared down to the tile.</figcaption></figure>
     <figure class="card"><h3>Sunroom cleanout</h3><img src="/images/lanai-ba.jpg" width="1120" height="541" loading="lazy" alt="Before and after sunroom cleanout: a wicker loveseat and clutter, then cleared to bare tile"><figcaption>Wicker loveseat, shelves and clutter cleared from an enclosed porch.</figcaption></figure>
     <figure class="card"><h3>Patio cleanout</h3><img src="/images/patio-ba.jpg" width="1120" height="541" loading="lazy" alt="Before and after patio cleanout: a cast-iron bench and planter, then a cleared corner"><figcaption>Cast-iron bench, table and planter removed from a patio corner.</figcaption></figure>
-    <figure class="card"><h3>Vine & yard removal</h3><img src="/images/yard1-ba.jpg" width="1120" height="541" loading="lazy" alt="Before and after yard cleanup: a home covered in vines, then cleared"><figcaption>Heavy vine overgrowth pulled off the home and hauled away.</figcaption></figure>
+    <figure class="card"><h3>Yard debris removal</h3><img src="/images/yard1-ba.jpg" width="1120" height="586" loading="lazy" alt="Before and after yard debris removal: overgrown shrubs and brush, then a cleared bed"><figcaption>Overgrown shrubs and brush cut back and hauled away to a tidy bed.</figcaption></figure>
+    <figure class="card"><h3>Vine removal</h3><img src="/images/vine-ba.jpg" width="1120" height="541" loading="lazy" alt="Before and after vine removal: a home covered in vines, then pulled clear"><figcaption>Heavy vine overgrowth pulled off the home and hauled away.</figcaption></figure>
     <figure class="card"><h3>Patio cleanup</h3><img src="/images/yard2-ba.jpg" width="1120" height="541" loading="lazy" alt="Before and after patio cleanup: overgrown ferns and old chairs, then cleared"><figcaption>Old patio chairs and a table removed from an overgrown corner.</figcaption></figure>
   </div>
   <h2>Our services</h2><p><a href="/furniture-removal/">Furniture Removal</a> &middot; <a href="/appliance-removal/">Appliance Removal</a> &middot; <a href="/estate-cleanouts/">Estate Cleanouts</a> &middot; <a href="/yard-debris-removal/">Yard Debris Removal</a> &middot; <a href="/hot-tub-playground-removal/">Hot Tub &amp; Playground Removal</a> &middot; <a href="/electronic-waste-removal/">Electronic Waste Removal</a> &middot; <a href="/construction-debris-removal/">Construction Debris Removal</a> &middot; <a href="/house-garage-cleanouts/">House &amp; Garage Cleanouts</a> &middot; <a href="/trash-removal/">Trash Removal &amp; Disposal</a></p>
@@ -175,6 +181,32 @@
   </div>
 </div></footer>
 <div class="callbar"><a class="btn btn-gold" href="tel:+19412541023">Call (941) 254-1023</a><a class="btn btn-outline" href="https://calendar.app.google/RL26Y6vr5L81cjNb6">Free quote</a></div>
+<div class="qpop" id="qpop" hidden role="dialog" aria-modal="true" aria-labelledby="qpop-h">
+  <div class="qpop-card">
+    <button class="qpop-x" type="button" aria-label="Close">&times;</button>
+    <div class="qpop-eyebrow">Free &middot; No obligation</div>
+    <h2 id="qpop-h">Get a free quote</h2>
+    <p>Tell us what needs to go and we'll give you one all-in price &mdash; labor, hauling and disposal included. Same-day service when we can.</p>
+    <div class="qpop-cta">
+      <a class="btn btn-gold" href="https://calendar.app.google/RL26Y6vr5L81cjNb6">Schedule a free quote</a>
+      <a class="btn btn-green-outline" href="tel:+19412541023">Call (941) 254-1023</a>
+    </div>
+    <button class="qpop-no" type="button">No thanks</button>
+  </div>
+</div>
+<script>
+(function(){var K='rnt_q_popup';function seen(){try{return localStorage.getItem(K)}catch(e){return 0}}function mark(){try{localStorage.setItem(K,'1')}catch(e){}}
+var el=document.getElementById('qpop');if(!el||seen())return;var shown=false;
+function show(){if(shown)return;shown=true;mark();el.hidden=false;document.body.style.overflow='hidden';var f=el.querySelector('.btn-gold');if(f)f.focus();}
+function hide(){el.hidden=true;document.body.style.overflow='';}
+el.querySelector('.qpop-x').addEventListener('click',hide);
+el.querySelector('.qpop-no').addEventListener('click',hide);
+el.addEventListener('click',function(e){if(e.target===el)hide();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!el.hidden)hide();});
+setTimeout(show,15000);
+document.addEventListener('mouseout',function(e){if(e.clientY<=0&&!e.relatedTarget)show();});
+})();
+</script>
 <script>
 (function(){document.querySelectorAll('.dd-btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var d=b.parentNode,o=d.classList.toggle('open');b.setAttribute('aria-expanded',o)})})})();
 </script>

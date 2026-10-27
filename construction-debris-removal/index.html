@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#3A4C40">
 <link rel="preload" href="/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=7">
+<link rel="stylesheet" href="/style.css?v=8">
 <title>Construction Debris Removal in Palmetto, Bradenton & Sarasota, FL | Rough n Tough</title>
 <meta name="description" content="Construction and remodel debris removal in Palmetto, Bradenton, Sarasota, Parrish and Venice, FL. Drywall, lumber, flooring and tile hauled away. Free quotes, pricing from $125.">
 <link rel="canonical" href="https://www.roughntoughjunkremoval.com/construction-debris-removal/">
@@ -204,6 +204,32 @@
   </div>
 </div></footer>
 <div class="callbar"><a class="btn btn-gold" href="tel:+19412541023">Call (941) 254-1023</a><a class="btn btn-outline" href="https://calendar.app.google/RL26Y6vr5L81cjNb6">Free quote</a></div>
+<div class="qpop" id="qpop" hidden role="dialog" aria-modal="true" aria-labelledby="qpop-h">
+  <div class="qpop-card">
+    <button class="qpop-x" type="button" aria-label="Close">&times;</button>
+    <div class="qpop-eyebrow">Free &middot; No obligation</div>
+    <h2 id="qpop-h">Get a free quote</h2>
+    <p>Tell us what needs to go and we'll give you one all-in price &mdash; labor, hauling and disposal included. Same-day service when we can.</p>
+    <div class="qpop-cta">
+      <a class="btn btn-gold" href="https://calendar.app.google/RL26Y6vr5L81cjNb6">Schedule a free quote</a>
+      <a class="btn btn-green-outline" href="tel:+19412541023">Call (941) 254-1023</a>
+    </div>
+    <button class="qpop-no" type="button">No thanks</button>
+  </div>
+</div>
+<script>
+(function(){var K='rnt_q_popup';function seen(){try{return localStorage.getItem(K)}catch(e){return 0}}function mark(){try{localStorage.setItem(K,'1')}catch(e){}}
+var el=document.getElementById('qpop');if(!el||seen())return;var shown=false;
+function show(){if(shown)return;shown=true;mark();el.hidden=false;document.body.style.overflow='hidden';var f=el.querySelector('.btn-gold');if(f)f.focus();}
+function hide(){el.hidden=true;document.body.style.overflow='';}
+el.querySelector('.qpop-x').addEventListener('click',hide);
+el.querySelector('.qpop-no').addEventListener('click',hide);
+el.addEventListener('click',function(e){if(e.target===el)hide();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!el.hidden)hide();});
+setTimeout(show,15000);
+document.addEventListener('mouseout',function(e){if(e.clientY<=0&&!e.relatedTarget)show();});
+})();
+</script>
 <script>
 (function(){document.querySelectorAll('.dd-btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var d=b.parentNode,o=d.classList.toggle('open');b.setAttribute('aria-expanded',o)})})})();
 </script>
