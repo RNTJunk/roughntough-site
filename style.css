@@ -164,3 +164,16 @@ h2{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(40px,5vw,
 @media (max-width:900px){
   .book-embed iframe{height:1300px}
 }
+
+/* seo additions */
+.faq{background:var(--ground)}
+.faq h2{margin-bottom:20px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:8px;padding:0 20px;margin:0 0 12px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--green);font-size:28px;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{margin:0 0 18px;font-size:18px;color:#26322A}
+.areas{margin:32px 0 0;font-size:16px}
+.areas a{text-decoration:underline}
+.policy .cta-row{margin:24px 0 8px}
