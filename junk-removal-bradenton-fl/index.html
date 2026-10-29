@@ -189,12 +189,12 @@ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es
   <div class="qbox">
   <h2>Get a free quote in Bradenton</h2>
   <p class="sub">Tell us what needs to go and we will get back to you with a price. Prefer a time slot? <a href="https://calendar.app.google/RL26Y6vr5L81cjNb6">Schedule online</a> or call <a href="tel:+19412541023">(941) 254-1023</a>.</p>
-  <form class="qform qcompact" action="https://formsubmit.co/info@roughntoughjunkremoval.com" method="POST">
-    <input type="hidden" name="_subject" value="New quote request - Rough n Tough website">
-    <input type="hidden" name="_next" value="https://www.roughntoughjunkremoval.com/thank-you">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <form class="qform qcompact" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="dc000d01-48eb-4a00-ae52-ecdac047127e">
+    <input type="hidden" name="subject" value="New quote request - Rough n Tough website">
+    <input type="hidden" name="from_name" value="Rough n Tough Website">
+    <input type="hidden" name="redirect" value="https://www.roughntoughjunkremoval.com/thank-you">
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="qrow"><label>Name<input type="text" name="name" autocomplete="name" required></label>
     <label>Phone<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label></div>
     <div class="qrow"><label>Email (optional)<input type="email" name="email" autocomplete="email"></label>
@@ -278,6 +278,15 @@ document.addEventListener('mouseout',function(e){if(e.clientY<=0&&!e.relatedTarg
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script>
 (function(){document.querySelectorAll('.dd-btn').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var d=b.parentNode,o=d.classList.toggle('open');b.setAttribute('aria-expanded',o)})})})();
+</script>
+<script>
+document.querySelectorAll('form.qform').forEach(function(f){f.addEventListener('submit',async function(e){
+ e.preventDefault();var b=f.querySelector('[type=submit]'),t=b?b.textContent:'';if(b){b.disabled=true;b.textContent='Sending...';}
+ try{var r=await fetch(f.action,{method:'POST',headers:{Accept:'application/json'},body:new FormData(f)});var j=await r.json();
+  if(r.ok&&j.success){location.href='/thank-you';return;}throw new Error('send failed');}
+ catch(err){if(b){b.disabled=false;b.textContent=t;}var m=f.querySelector('.qerr');if(!m){m=document.createElement('p');m.className='qerr';m.setAttribute('role','alert');m.style.cssText='margin-top:12px;padding:10px 12px;border:2px solid #E1AD21;border-radius:8px;font-weight:600';f.appendChild(m);}
+  m.innerHTML='Sorry, that didn\u2019t go through. Please call or text <a href="tel:+19412541023">(941) 254-1023</a> and we\u2019ll get you a quote.';}
+});});
 </script>
 </body>
 </html>
